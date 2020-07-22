@@ -38,7 +38,7 @@
               "src/mstile-310x150.png",
               "src/mstile-310x310.png",
               "src/safari-pinned-tab.svg",
-              "src/site.webmanifest"
+              "src/site.webmanifest.json"
             ],
             "styles": ["src/lemonmart-theme.scss", "src/styles.css"],
             "scripts": []
