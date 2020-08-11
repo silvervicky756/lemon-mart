@@ -7,7 +7,7 @@ import { SubSink } from 'subsink'
 
 import { Role } from '../auth/auth.enum'
 import { AuthService } from '../auth/auth.service'
-// import { UiService } from '../common/ui.service'
+import { UiService } from '../common/ui.service'
 import { EmailValidation, PasswordValidation } from '../common/validations'
 
 @Component({
@@ -35,7 +35,8 @@ export class LoginComponent implements OnInit {
     private formBuilder: FormBuilder,
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private uiService: UiService
   ) {
     this.subs.sink = route.paramMap.subscribe(
       (params) => (this.redirectUrl = params.get('redirectUrl') ?? '')
@@ -74,7 +75,7 @@ export class LoginComponent implements OnInit {
         filter(([authStatus, user]) => authStatus.isAuthenticated && user?._id !== ''),
         tap(([authStatus, user]) => {
           //this.uiService.showToast(`Welcome ${user.fullName}! Role: ${user.role}`)
-          // this.uiService.showDialog(`Welcome ${user.fullName}!`, `Role: ${user.role}`)
+          this.uiService.showDialog(`Welcome ${user.fullName}!`, `Role: ${user.role}`)
           this.router.navigate([
             this.redirectUrl || this.homeRoutePerRole(user.role as Role),
           ])
