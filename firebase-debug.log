@@ -1,0 +1,54 @@
+[debug] [2020-08-11T09:55:12.806Z] ----------------------------------------------------------------------
+[debug] [2020-08-11T09:55:12.808Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vignesh saravanan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-08-11T09:55:12.808Z] CLI Version:   8.7.0
+[debug] [2020-08-11T09:55:12.808Z] Platform:      win32
+[debug] [2020-08-11T09:55:12.808Z] Node Version:  v12.14.1
+[debug] [2020-08-11T09:55:12.810Z] Time:          Tue Aug 11 2020 15:25:12 GMT+0530 (India Standard Time)
+[debug] [2020-08-11T09:55:12.810Z] ----------------------------------------------------------------------
+[debug] [2020-08-11T09:55:12.810Z] 
+[debug] [2020-08-11T09:55:12.825Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-11T09:55:12.826Z] > authorizing via signed-in user
+[debug] [2020-08-11T09:55:12.827Z] [iam] checking project silvermart-d47cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-11T09:55:12.834Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/silvermart-d47cc:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-11T09:55:16.628Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 11 Aug 2020 09:55:16 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1151","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-11T09:55:16.632Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/silvermart-d47cc  
+ 
+[debug] [2020-08-11T09:55:20.050Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 11 Aug 2020 09:55:19 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'silvermart-d47cc'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-08-11T09:55:20.070Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/silvermart-d47cc/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-11T09:55:46.041Z] Error: read ECONNRESET
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:200:27)
+[error] 
+[error] Error: Server Error. read ECONNRESET
+[debug] [2020-08-11T09:55:52.827Z] ----------------------------------------------------------------------
+[debug] [2020-08-11T09:55:52.829Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\vignesh saravanan\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js deploy
+[debug] [2020-08-11T09:55:52.830Z] CLI Version:   8.7.0
+[debug] [2020-08-11T09:55:52.830Z] Platform:      win32
+[debug] [2020-08-11T09:55:52.830Z] Node Version:  v12.14.1
+[debug] [2020-08-11T09:55:52.832Z] Time:          Tue Aug 11 2020 15:25:52 GMT+0530 (India Standard Time)
+[debug] [2020-08-11T09:55:52.832Z] ----------------------------------------------------------------------
+[debug] [2020-08-11T09:55:52.832Z] 
+[debug] [2020-08-11T09:55:52.842Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2020-08-11T09:55:52.843Z] > authorizing via signed-in user
+[debug] [2020-08-11T09:55:52.843Z] [iam] checking project silvermart-d47cc for permissions ["firebase.projects.get","firebasehosting.sites.update"]
+[debug] [2020-08-11T09:55:52.848Z] >>> HTTP REQUEST POST https://cloudresourcemanager.googleapis.com/v1/projects/silvermart-d47cc:testIamPermissions  
+ {"permissions":["firebase.projects.get","firebasehosting.sites.update"]}
+[debug] [2020-08-11T09:55:55.960Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 11 Aug 2020 09:55:55 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","server-timing":"gfet4t7; dur=1130","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[debug] [2020-08-11T09:55:55.964Z] >>> HTTP REQUEST GET https://firebase.googleapis.com/v1beta1/projects/silvermart-d47cc  
+ 
+[debug] [2020-08-11T09:55:58.969Z] <<< HTTP RESPONSE 200 {"content-type":"application/json; charset=UTF-8","vary":"X-Origin, Referer, Origin,Accept-Encoding","date":"Tue, 11 Aug 2020 09:55:58 GMT","server":"ESF","cache-control":"private","x-xss-protection":"0","x-frame-options":"SAMEORIGIN","x-content-type-options":"nosniff","alt-svc":"h3-29=\":443\"; ma=2592000,h3-27=\":443\"; ma=2592000,h3-T050=\":443\"; ma=2592000,h3-Q050=\":443\"; ma=2592000,h3-Q046=\":443\"; ma=2592000,h3-Q043=\":443\"; ma=2592000,quic=\":443\"; ma=2592000; v=\"46,43\"","accept-ranges":"none","transfer-encoding":"chunked"}
+[info] 
+[info] === Deploying to 'silvermart-d47cc'...
+[info] 
+[info] i  deploying hosting 
+[debug] [2020-08-11T09:55:58.986Z] >>> HTTP REQUEST POST https://firebasehosting.googleapis.com/v1beta1/sites/silvermart-d47cc/versions  
+ {"config":{"rewrites":[{"glob":"**","path":"/index.html"}]},"labels":{"deployment-tool":"cli-firebase"}}
+[debug] [2020-08-11T09:56:20.346Z] Error: read ECONNRESET
+    at TLSWrap.onStreamRead (internal/stream_base_commons.js:200:27)
+[error] 
+[error] Error: Server Error. read ECONNRESET

@@ -12,6 +12,7 @@ import {
   commonTestingModules,
   commonTestingProviders,
 } from './common/common.testing'
+import { NavigationMenuComponent } from './navigation-menu/navigation-menu.component'
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -22,7 +23,7 @@ describe('AppComponent', () => {
         { provide: MatIconRegistry, useClass: MatIconRegistryFake },
         { provide: DomSanitizer, useClass: DomSanitizerFake },
       ]),
-      declarations: [AppComponent],
+      declarations: [AppComponent, NavigationMenuComponent],
     }).compileComponents()
   }))
 
@@ -36,6 +37,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.nativeElement
-    expect(compiled.querySelector('span.mat-h2').textContent).toContain('LemonMart')
+    expect(compiled.querySelector('span.mat-h2').textContent).toContain('SilverMart')
   })
 })
