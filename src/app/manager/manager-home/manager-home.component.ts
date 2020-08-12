@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core'
 
 @Component({
   selector: 'app-manager-home',
@@ -7,14 +7,10 @@ import { Component, OnInit } from '@angular/core';
       manager-home works!
     </p>
   `,
-  styles: [
-  ]
+  styles: [],
 })
 export class ManagerHomeComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

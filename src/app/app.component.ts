@@ -59,14 +59,19 @@ import { AuthService } from './auth/auth.service'
         </button>
       </mat-toolbar>
       <mat-sidenav-container class="app-sidenav-container">
-      <mat-sidenav #sidenav [mode]="media.isActive('xs') ? 'over' : 'side'" [fixedInViewport]="media.isActive('xs')"
-        fixedTopGap="56" [(opened)]="opened">
-        <app-navigation-menu></app-navigation-menu>
-      </mat-sidenav>
-      <mat-sidenav-content>
-        <router-outlet></router-outlet>
-      </mat-sidenav-content>
-    </mat-sidenav-container>
+        <mat-sidenav
+          #sidenav
+          [mode]="media.isActive('xs') ? 'over' : 'side'"
+          [fixedInViewport]="media.isActive('xs')"
+          fixedTopGap="56"
+          [(opened)]="opened"
+        >
+          <app-navigation-menu></app-navigation-menu>
+        </mat-sidenav>
+        <mat-sidenav-content>
+          <router-outlet></router-outlet>
+        </mat-sidenav-content>
+      </mat-sidenav-container>
     </div>
   `,
   styles: [
