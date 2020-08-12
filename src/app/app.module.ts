@@ -2,6 +2,7 @@ import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http'
 import { NgModule } from '@angular/core'
 import { AngularFireModule } from '@angular/fire'
 import { AngularFireAnalyticsModule } from '@angular/fire/analytics'
+import { AngularFireAuth } from '@angular/fire/auth'
 import { AngularFirestoreModule } from '@angular/fire/firestore'
 import { FlexLayoutModule } from '@angular/flex-layout'
 import { ReactiveFormsModule } from '@angular/forms'
@@ -12,8 +13,7 @@ import { environment } from 'src/environments/environment'
 import { AppRoutingModule } from './app-routing.module'
 import { AppComponent } from './app.component'
 import { AuthHttpInterceptor } from './auth/auth-http-interceptor'
-import { FirebaseAuthService } from './auth/auth.firebase.service'
-import { InMemoryAuthService } from './auth/auth.inmemory.service'
+import { authFactory } from './auth/auth.factory'
 import { AuthService } from './auth/auth.service'
 import { SimpleDialogComponent } from './common/simple-dialog.component'
 import { HomeComponent } from './home/home.component'
@@ -44,7 +44,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     AngularFirestoreModule,
   ],
   providers: [
-    { provide: AuthService, useClass: FirebaseAuthService },
+    { provide: AuthService, useFactory: authFactory, deps: [AngularFireAuth] },
     { provide: HTTP_INTERCEPTORS, useClass: AuthHttpInterceptor, multi: true },
   ],
   bootstrap: [AppComponent],

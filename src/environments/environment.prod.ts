@@ -1,3 +1,4 @@
+import { AuthMode } from '../app/auth/auth.enum'
 export const environment = {
   production: true,
   firebaseConfig: {
@@ -10,4 +11,5 @@ export const environment = {
     appId: '1:528470796843:web:49a69faf4f56e10ad4986e',
     measurementId: 'G-RMLFLNXEBN',
   },
+  authMode: AuthMode.Firebase,
 }

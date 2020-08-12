@@ -2,6 +2,8 @@
 // `ng build --prod` replaces `environment.ts` with `environment.prod.ts`.
 // The list of file replacements can be found in `angular.json`.
 
+import { AuthMode } from 'src/app/auth/auth.enum'
+
 export const environment = {
   production: false,
   firebaseConfig: {
@@ -14,6 +16,7 @@ export const environment = {
     appId: '1:528470796843:web:49a69faf4f56e10ad4986e',
     measurementId: 'G-RMLFLNXEBN',
   },
+  authMode: AuthMode.InMemory,
 }
 
 /*
