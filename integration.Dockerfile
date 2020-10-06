@@ -7,7 +7,7 @@ WORKDIR $BUILDER_SRC_DIR
 COPY . .
 
 # install dependencies and build
-RUN npm ci
+RUN npm install
 RUN npm run style
 RUN npm run lint
 RUN npm run build:prod
