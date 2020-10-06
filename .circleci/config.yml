@@ -50,7 +50,7 @@ jobs:
           command: |
             docker build -f integration.Dockerfile . -t lemonmart:$CIRCLE_BRANCH
             mkdir -p docker-cache
-            docker save lemon-mart:$CIRCLE_BRANCH | gzip > dockercache/built-image.tar.gz
+            docker save lemon-mart:$CIRCLE_BRANCH | gzip > docker-cache/built-image.tar.gz
       - save_cache:
           key: built-image-{{ .BuildNum }}
           paths:
