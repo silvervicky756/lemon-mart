@@ -1,12 +1,14 @@
 {
   "name": "lemon-mart",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "scripts": {
     "ng": "ng",
     "start": "ng serve --port 5000",
     "build": "ng build",
     "build:prod": "ng build --prod",
-    "test": "ng test",
+    "build:integration": "cross-conf-env docker image build -f integration.Dockerfile . -t $npm_package_config_imageRepo:latest",
+    "test": "ng test lemon-mart --browsers Chrome",
+    "test:prod": "npm test -- --browsers ChromiumNoSandbox --watch=false",
     "lint": "run-p lint:ts lint:tsc",
     "e2e": "ng e2e",
     "style": "import-sort -l \"**/{src,tests,e2e}/**/*.ts\" && prettier --check \"**/{src,tests,e2e}/**/*.{*css,ts}\"",
@@ -16,7 +18,7 @@
     "lint:ts:fix": "tslint --config tslint.json --fix --project . -e \"**/{test,polyfills}.ts\"",
     "lint:tsc": "tsc --noEmit --skipLibCheck",
     "init:env": "init-dev-env generate-dot-env example.env -f",
-    "predocker:build": "npm run build",
+    "predocker:build": "npm run build:prod && npm run test -- --watch=false",
     "docker:build": "cross-conf-env docker image build . -t $npm_package_config_imageRepo:$npm_package_version",
     "postdocker:build": "npm run docker:tag",
     "docker:tag": " cross-conf-env docker image tag $npm_package_config_imageRepo:$npm_package_version $npm_package_config_imageRepo:latest",
@@ -48,6 +50,7 @@
     "fake-jwt-sign": "^1.1.1",
     "firebase": "^7.17.2",
     "jwt-decode": "^2.2.0",
+    "mrm-task-npm-docker": "^1.1.1",
     "rxjs": "~6.5.5",
     "subsink": "^1.0.1",
     "tslib": "^2.0.0",
@@ -105,9 +108,9 @@
     }
   },
   "config": {
-    "imageRepo": "[namespace]/[repository]",
-    "imageName": "custom_app_name",
-    "imagePort": "3000",
+    "imageRepo": "silvervicky756/silvermart",
+    "imageName": "silvermart",
+    "imagePort": "5000",
     "internalContainerPort": "3000"
   }
 }
